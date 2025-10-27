@@ -41,6 +41,36 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "_site/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "_site/logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/public/bootstrap-icons-OCU552PF.woff",
+      "output": {
+        "resource": {
+          "relative_path": "_site/public/bootstrap-icons-OCU552PF.woff"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "_site/public/bootstrap-icons-X6UQXWUS.woff2",
+      "output": {
+        "resource": {
+          "relative_path": "_site/public/bootstrap-icons-X6UQXWUS.woff2"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
