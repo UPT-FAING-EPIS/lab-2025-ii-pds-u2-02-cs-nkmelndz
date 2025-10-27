@@ -1,22 +1,10 @@
----
-_layout: landing
----
+# Documentación del Proyecto
 
-# Bienvenido a la Documentación
+Bienvenido a la documentación del proyecto. Aquí encontrarás información detallada sobre los módulos y componentes de los proyectos **CustomerApp** y **Notifications**.
 
-Esta es la documentación oficial de los proyectos Notifications y CustomerApp. Aquí encontrarás información sobre las clases, interfaces y patrones de diseño implementados.
+## Contenido
 
-## Contenido:
+- [CustomerApp](CustomerApp/disenio.html)
+- [Notifications](Notifications/disenio.html)
 
-1. [Documentación de Notifications](documentation/api/Notifications/index.md)
-2. [Documentación de CustomerApp](documentation/api/CustomerApp/index.md)
-3. [Guía de Usuario](documentation/user-guide.md)
-
-## Introducción
-
-Los proyectos Notifications y CustomerApp implementan patrones de diseño como Bridge y Facade para manejar el envío de mensajes y la gestión de clientes.
-
-## Quick Start Notes:
-
-1. Agrega imágenes a la carpeta *images* si el archivo hace referencia a una imagen.
-2. Asegúrate de que los archivos de código estén documentados correctamente para generar una documentación precisa.
+Consulta los enlaces anteriores para obtener más detalles sobre cada módulo.

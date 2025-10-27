@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>SESION DE LABORATORIO N&#176; 02: PATRONES DE DISE&#209;O ESTRUCTURALES | Notifications &amp; CustomerApp API Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="SESION DE LABORATORIO N&#176; 02: PATRONES DE DISE&#209;O ESTRUCTURALES | Notifications &amp; CustomerApp API Documentation ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/UPT-FAING-EPIS/lab-2025-ii-pds-u2-02-cs-nkmelndz/blob/main/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="images/logo.png" alt="Notifications &amp; CustomerApp Documentation">
+            Notifications &amp; CustomerApp Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="https://classroom.github.com/a/qX_M5zXi"><img src="https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg" alt="Review Assignment Due Date"></a>
+<a href="https://classroom.github.com/open-in-codespaces?assignment_repo_id=21148965"><img src="https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg" alt="Open in Codespaces"></a></p>
+<h1 id="sesion-de-laboratorio-n-02-patrones-de-diseño-estructurales">SESION DE LABORATORIO N° 02: PATRONES DE DISEÑO ESTRUCTURALES</h1>
+<h3 id="nombre">Nombre:</h3>
+<h2 id="objetivos">OBJETIVOS</h2>
+<ul>
+<li>Comprender el funcionamiento de algunos patrones de diseño de software del tipo estructural.</li>
+</ul>
+<h2 id="requerimientos">REQUERIMIENTOS</h2>
+<ul>
+<li>Conocimientos:
+<ul>
+<li>Conocimientos básicos de Bash (powershell).</li>
+<li>Conocimientos básicos de Contenedores (Docker).</li>
+</ul>
+</li>
+<li>Hardware:
+<ul>
+<li>Virtualization activada en el BIOS..</li>
+<li>CPU SLAT-capable feature.</li>
+<li>Al menos 4GB de RAM.</li>
+</ul>
+</li>
+<li>Software:
+<ul>
+<li>Windows 10 64bit: Pro, Enterprise o Education (1607 Anniversary Update, Build 14393 o Superior)</li>
+<li>Docker Desktop</li>
+<li>Powershell versión 7.x</li>
+<li>Net 8 o superior</li>
+<li>Visual Studio Code</li>
+</ul>
+</li>
+</ul>
+<h2 id="consideraciones-iniciales">CONSIDERACIONES INICIALES</h2>
+<ul>
+<li>Clonar el repositorio mediante git para tener los recursos necesarios</li>
+</ul>
+<h2 id="desarrollo">DESARROLLO</h2>
+<h3 id="parte-i-bridge-design-pattern">PARTE I: Bridge Design Pattern</h3>
+<p><img src="https://github.com/UPT-FAING-EPIS/SI889_PDS/assets/10199939/186e0bbd-0d14-48eb-af20-8f46dc0a08ca" alt="image"></p>
+<p><img src="https://github.com/UPT-FAING-EPIS/SI889_PDS/assets/10199939/fab291c1-01e9-4a11-bfbd-a34609466cab" alt="image"></p>
+<ol>
+<li>Iniciar la aplicación Powershell o Windows Terminal en modo administrador</li>
+<li>Ejecutar el siguiente comando para crear una nueva solución</li>
+</ol>
+<pre><code>dotnet new sln -o Notifications
+</code></pre>
+<ol start="3">
+<li>Acceder a la solución creada y ejecutar el siguiente comando para crear una nueva libreria de clases y adicionarla a la solución actual.</li>
+</ol>
+<pre><code>cd Notifications
+dotnet new classlib -o Notifications.Domain
+dotnet sln add ./Notifications.Domain/Notifications.Domain.csproj
+</code></pre>
+<ol start="4">
+<li>Ejecutar el siguiente comando para crear un nuevo proyecto de pruebas y adicionarla a la solución actual</li>
+</ol>
+<pre><code>dotnet new nunit -o Notifications.Domain.Tests
+dotnet sln add ./Notifications.Domain.Tests/Notifications.Domain.Tests.csproj
+dotnet add ./Notifications.Domain.Tests/Notifications.Domain.Tests.csproj reference ./Notifications.Domain/Notifications.Domain.csproj
+</code></pre>
+<ol start="5">
+<li><p>Iniciar Visual Studio Code (VS Code) abriendo el folder de la solución como proyecto. En el proyecto Notifications.Domain, si existe un archivo Class1.cs proceder a eliminarlo. Asimismo en el proyecto Notifications.Domain.Tests si existiese un archivo UnitTest1.cs, también proceder a eliminarlo.</p>
+</li>
+<li><p>Primero se necesita implementar la interfaz que servirá de PUENTE entre la clase abstracta de mensajes y las posible implementaciones de envio. Por eso en VS Code, en el proyecto Notifications.Domain proceder a crear el archivo IMessageSender.cs :</p>
+</li>
+</ol>
+<pre><code class="lang-C#">namespace Notifications.Domain
+{
+    public interface IMessageSender
+    {
+        string SendMessage(string Message);
+    }
+}
+</code></pre>
+<ol start="7">
+<li>Ahora proceder a implementar las clases concretas o implementaiones a partir de la interfaz creada, Para esto en el proyecto Notifications.Domain proceder a crear los archivos siguientes:</li>
+</ol>
+<blockquote>
+<p>SmsMessageSender.cs</p>
+</blockquote>
+<pre><code class="lang-C#">namespace Notifications.Domain
+{
+    public class SmsMessageSender : IMessageSender
+    {
+        public string SendMessage(string Message)
+        {
+            return &quot;'&quot; + Message + &quot;' : This Message has been sent using SMS&quot;;
+        }
+    }
+}
+</code></pre>
+<blockquote>
+<p>EmailMessageSender.cs</p>
+</blockquote>
+<pre><code class="lang-C#">namespace Notifications.Domain
+{
+    public class EmailMessageSender : IMessageSender
+    {
+        public string SendMessage(string Message)
+        {
+            return &quot;'&quot; + Message + &quot;'   : This Message has been sent using Email&quot;;
+        }
+    }
+}
+</code></pre>
+<ol start="8">
+<li>Seguidamente crear la clase abstracta que permitira definir los posibles tipos de mensajes por lo que en el proyecto de Notifications.Domain se debe agregar el archivo AbstractMessage.cs con el siguiente código:</li>
+</ol>
+<pre><code class="lang-C#">namespace Notifications.Domain
+{
+    public abstract class AbstractMessage
+    {
+        protected IMessageSender _messageSender;
+        public abstract string SendMessage(string Message);        
+    }
+}
+</code></pre>
+<ol start="9">
+<li>Sobre esta clase abstracta ahora se necesita implementar los tipos de mensajes concretos, para eso adicionar los siguientes archivos al proyecto Notifications.Domain:</li>
+</ol>
+<blockquote>
+<p>ShortMessage.cs</p>
+</blockquote>
+<pre><code class="lang-C#">namespace Notifications.Domain
+{
+    public class ShortMessage: AbstractMessage
+    {
+        public const string LARGE_ERROR_MESSAGE = &quot;Unable to send the message as length &gt; 10 characters&quot;;
+        public ShortMessage(IMessageSender messageSender)
+        {
+            this._messageSender = messageSender;
+        }
+        public override string SendMessage(string Message)
+        {
+            if (Message.Length &lt;= 25)
+                return _messageSender.SendMessage(Message);
+            else
+                throw new ArgumentException(LARGE_ERROR_MESSAGE);
+        }
+    }
+}
+</code></pre>
+<blockquote>
+<p>LongMessage.cs</p>
+</blockquote>
+<pre><code class="lang-C#">namespace Notifications.Domain
+{
+    public class LongMessage: AbstractMessage
+    {
+        public LongMessage(IMessageSender messageSender)
+        {
+            this._messageSender = messageSender;
+        }
+        public override string SendMessage(string Message)
+        {
+           return _messageSender.SendMessage(Message);
+        }
+    }
+}
+</code></pre>
+<ol start="10">
+<li>Ahora proceder a implementar unas pruebas para verificar el correcto funcionamiento de la aplicación. Para esto al proyecto Notifications.Domain.Tests adicionar el archivo MessageTests.cs y agregar el siguiente código:</li>
+</ol>
+<pre><code class="lang-C#">using Notifications.Domain;
+using NUnit.Framework;
+
+namespace Notifications.Domain.Tests
+{
+    public class MessageTests
+    {
+        [Test]
+        public void GivenLongMessage_WhenSend_ThenEmailIsTriggered()
+        {
+            string Message = &quot;Este es un mensaje bien pero bien largoooooooooooooooooooooooo.&quot;;
+            AbstractMessage longMessage = new LongMessage(new EmailMessageSender());
+            var confirm = longMessage.SendMessage(Message);
+            Assert.IsTrue(!string.IsNullOrEmpty(confirm));
+            Assert.IsTrue(confirm.Contains(Message));
+        }
+        [Test]
+        public void GivenShortMessage_WhenSend_ThenSMSIsTriggered()
+        {
+            string Message = &quot;Este es un mensaje corto.&quot;;
+            AbstractMessage shortMessage = new ShortMessage(new SmsMessageSender());
+            var confirm = shortMessage.SendMessage(Message);
+            Assert.IsTrue(!string.IsNullOrEmpty(confirm));
+            Assert.IsTrue(confirm.Contains(Message));
+        }
+        [Test]
+        public void GivenLargeMessage_WhenSendinSMS_ThenOccursException()
+        {
+            string Message = &quot;Este es un mensaje largooooooooooooooooo.&quot;;
+            AbstractMessage shortMessage = new ShortMessage(new SmsMessageSender());
+            Assert.Throws&lt;ArgumentException&gt;(
+                () =&gt; shortMessage.SendMessage(Message)
+                , ShortMessage.LARGE_ERROR_MESSAGE);
+        }
+    }
+}
+</code></pre>
+<ol start="11">
+<li>Ahora necesitamos comprobar las pruebas contruidas para eso abrir un terminal en VS Code (CTRL + Ñ) o vuelva al terminal anteriormente abierto, y ejecutar los comandos:</li>
+</ol>
+<pre><code class="lang-Bash">dotnet test --collect:&quot;XPlat Code Coverage&quot;
+</code></pre>
+<ol start="12">
+<li>Si las pruebas se ejecutaron correctamente debera aparcer un resultado similar al siguiente:</li>
+</ol>
+<pre><code class="lang-Bash">Passed!  - Failed:     0, Passed:     3, Skipped:     0, Total:     3, Duration: 5 ms
+</code></pre>
+<ol start="13">
+<li>En el terminal, ejecutar el siguiente comando para generar el diagrama de clases respectivo, tener en consideración que ruta del DLL puede ser distinta según la versión de .NET tenga instalada en el equipo.</li>
+</ol>
+<pre><code class="lang-Bash">dotnet tool install --global dll2mmd
+dll2mmd -f Notifications.Domain/bin/Debug/net8.0/Notifications.Domain.dll -o disenio.md
+</code></pre>
+<h3 id="parte-ii-facade-design-pattern">PARTE II: Facade Design Pattern</h3>
+<p><img src="https://github.com/UPT-FAING-EPIS/SI889_PDS/assets/10199939/ece5c02f-fe5e-4125-91f4-7479f6c3d746" alt="image"></p>
+<ol>
+<li>Iniciar una nueva instancia de la aplicación Powershell o Windows Terminal en modo administrador</li>
+<li>Ejecutar el siguiente comando para crear una nueva solución</li>
+</ol>
+<pre><code>dotnet new sln -o CustomerApp
+</code></pre>
+<ol start="3">
+<li>Acceder a la solución creada y ejecutar el siguiente comando para crear una nueva libreria de clases y adicionarla a la solución actual.</li>
+</ol>
+<pre><code>cd CustomerApp
+dotnet new classlib -o CustomerApp.Domain
+dotnet sln add ./CustomerApp.Domain/CustomerApp.Domain.csproj
+</code></pre>
+<ol start="4">
+<li>Ejecutar el siguiente comando para crear un nuevo proyecto de pruebas y adicionarla a la solución actual</li>
+</ol>
+<pre><code>dotnet new nunit -o CustomerApp.Domain.Tests
+dotnet sln add ./CustomerApp.Domain.Tests/CustomerApp.Domain.Tests.csproj
+dotnet add ./CustomerApp.Domain.Tests/CustomerApp.Domain.Tests.csproj reference ./CustomerApp.Domain/CustomerApp.Domain.csproj
+</code></pre>
+<ol start="5">
+<li><p>Iniciar Visual Studio Code (VS Code) abriendo el folder de la solución como proyecto. En el proyecto CustomerApp.Domain, si existe un archivo Class1.cs proceder a eliminarlo. Asimismo en el proyecto CustomerApp.Domain.Tests si existiese un archivo UnitTest1.cs, también proceder a eliminarlo.</p>
+</li>
+<li><p>Primero se necesita implementar la entidad Cliente, para esto crear el archivo Customer.cs en el proyecto CustomerApp.Domain con el siguiente código:</p>
+</li>
+</ol>
+<pre><code class="lang-C#">namespace CustomerApp.Domain
+{
+    public class Customer
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string MobileNumber { get; set; }
+        public string Address { get; set; }
+        public string Password { get; set; }
+        public static Customer Create(string name, string email, string mobileNumber, string address, string password)
+        {
+            return new Customer() {
+                Name = name, Email = email, MobileNumber = mobileNumber, Address = address, Password = password
+            };
+        }
+    }
+}
+</code></pre>
+<ol start="7">
+<li>Ahora se debe implementar cada una de clases correspondiente al flujo de creaciòn del cliente (validar, guardar y enviar email) para eso se deberan crear los siguientes archivos con el còdigo correspondiente:</li>
+</ol>
+<blockquote>
+<p>Validator.cs</p>
+</blockquote>
+<pre><code class="lang-C#">namespace CustomerApp.Domain
+{
+    public class Validator
+    {
+        public bool ValidateCustomer(Customer customer)
+        {
+            //Need to Validate the Customer Object
+            if (string.IsNullOrEmpty(customer.Name)) throw new ArgumentException(&quot;Name can't be null or empty&quot;);
+            if (string.IsNullOrEmpty(customer.Email)) throw new ArgumentException(&quot;Email can't be null or empty&quot;);
+            if (string.IsNullOrEmpty(customer.MobileNumber)) throw new ArgumentException(&quot;MobileNumber can't be null or empty&quot;);
+            if (string.IsNullOrEmpty(customer.Address)) throw new ArgumentException(&quot;Address can't be null or empty&quot;);
+            return true;
+        }
+    }
+}
+</code></pre>
+<blockquote>
+<p>DataAccessLayer.cs</p>
+</blockquote>
+<pre><code class="lang-C#">namespace CustomerApp.Domain
+{
+    public class DataAccessLayer
+    {
+        public List&lt;Customer&gt; Customers { get; set; }
+        public DataAccessLayer()
+        {
+            Customers = new List&lt;Customer&gt;();
+        }
+        public bool SaveCustomer(Customer customer)
+        {
+            Customers.Add(customer);
+            return true;
+        }        
+    }
+}
+</code></pre>
+<blockquote>
+<p>EmailService.cs</p>
+</blockquote>
+<pre><code class="lang-C#">using System.Net;
+using System.Net.Mail;
+
+namespace CustomerApp.Domain
+{
+    public class EmailService
+    {
+        public bool SendRegistrationEmail(Customer customer)
+        {
+            var smtpClient = new SmtpClient(&quot;smtp.gmail.com&quot;)
+            {
+                UseDefaultCredentials = false,
+                //Port = 587,
+                Credentials = new NetworkCredential(customer.Email, customer.Password),
+                EnableSsl = true,
+            };
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress(customer.Email),
+                Subject = &quot;Test mail&quot;,
+                Body = &quot;&lt;h1&gt;Hello&lt;/h1&gt;&quot;,
+                IsBodyHtml = true,
+            };
+            mailMessage.To.Add(customer.Email);
+            //smtpClient.Send(mailMessage);
+            return true;
+        }        
+    }
+}
+</code></pre>
+<ol start="8">
+<li>Para probar esta implementación, crear el archivo CustomerTests.cs en el proyecto CustomerApp.Domain.Tests:</li>
+</ol>
+<pre><code class="lang-C#">using NUnit.Framework;
+
+namespace CustomerApp.Domain.Tests
+{
+    public class CustomerTests
+    {
+        [Test]
+        public void GivenANewCustomer_WhenRegister_ThenIsValidatedSavedEmailedSuccessfully()
+        {
+            //Step1: Create an Instance of Customer Class
+            Customer customer = Customer.Create(
+                &quot;Jose Cuadros&quot;,&quot;p.cuadros@gmail.com&quot;,&quot;1234567890&quot;,&quot;Tacnamandapio&quot;,&quot;str0ng.pa55&quot;);
+            
+            //Step2: Validate the Customer
+            Validator validator = new Validator();
+            bool IsValid = validator.ValidateCustomer(customer);
+            //Step3: Save the Customer Object into the database
+            DataAccessLayer dataAccessLayer = new DataAccessLayer();
+            bool IsSaved = dataAccessLayer.SaveCustomer(customer);
+            //Step4: Send the Registration Email to the Customer
+            EmailService email = new EmailService();
+            bool IsEmailed = email.SendRegistrationEmail(customer);
+            
+            Assert.IsNotNull(customer);
+            Assert.Greater(dataAccessLayer.Customers.Count,0);
+            Assert.IsTrue(IsValid);
+            Assert.IsTrue(IsSaved);
+            Assert.IsTrue(IsEmailed);
+        }
+    }
+}
+</code></pre>
+<ol start="9">
+<li>Ahora necesitamos comprobar las pruebas contruidas para eso abrir un terminal en VS Code (CTRL + Ñ) o vuelva al terminal anteriormente abierto, y ejecutar el comando:</li>
+</ol>
+<pre><code class="lang-Bash">dotnet test --collect:&quot;XPlat Code Coverage&quot;
+</code></pre>
+<ol start="10">
+<li>Si las pruebas se ejecutaron correctamente debera aparcer un resultado similar al siguiente:</li>
+</ol>
+<pre><code class="lang-Bash">Total tests: 1. Passed: 1. Failed: 0. Skipped: 0
+</code></pre>
+<ol start="11">
+<li>Entonces ¿cuál es problema con este diseño? Funciona.... pero el problema es que ahora existen muchos sub sistemas como Validador, Acceso a Datos y Servicio de Email y el cliente que las utilice necesita seguir la secuencia apropiada para crear y consumir los objetos de los subsistemas. Existe una posibilidad que el cliente no siga esta secuencia apropiada o que olvide incluir o utilizar alguno de estos sub sistemas. Entonces si en vez de darle acceso a los sub sistemas, se crea una sola interfaz y se le brinda acceso al cliente para realizar el registo, asi la lógica compleja se traslada a esta interfaz sencilla. Para esto se utilizará el patrón FACHADA el cual escondera toda la complejidad y brindará un solo metodo cimple de usar al cliente.</li>
+</ol>
+<p><img src="https://github.com/UPT-FAING-EPIS/SI889_PDS/assets/10199939/a9cb73bb-c996-4e9a-bf4c-f665f1957119" alt="image"></p>
+<ol start="12">
+<li>Para lo cual proceder a crear el archivo CustomerRegistration.cs en el proyecto CustomerApp.Domain, con el siguiente contenido:</li>
+</ol>
+<pre><code class="lang-C#">using CustomerApp.Domain;
+
+public class CustomerRegistration
+{
+    public bool RegisterCustomer(Customer customer)
+    {
+        //Step1: Validate the Customer
+        Validator validator = new Validator();
+        bool IsValid = validator.ValidateCustomer(customer);
+        //Step1: Save the Customer Object into the database
+        DataAccessLayer customerDataAccessLayer = new DataAccessLayer();
+        bool IsSaved = customerDataAccessLayer.SaveCustomer(customer);
+        //Step3: Send the Registration Email to the Customer
+        EmailService email = new EmailService();
+        email.SendRegistrationEmail(customer);
+        return true;
+    }
+}
+</code></pre>
+<ol start="8">
+<li>Finalmente adciionar un nuevo método de prueba en la clase CustomerTests para comprobar el funcionamiento de la nueva clase creada:</li>
+</ol>
+<pre><code class="lang-C#">        [Test]
+        public void GivenANewCustomer_WhenRegister_ThenIsRegisteredSuccessfully()
+        {
+            //Step1: Create an Instance of Customer Class
+            Customer customer = Customer.Create(
+                &quot;Jose Cuadros&quot;,&quot;p.cuadros@gmail.com&quot;,&quot;1234567890&quot;,&quot;Tacnamandapio&quot;,&quot;str0ng.pa55&quot;);
+            //Step2: Using Facade Class
+            bool IsRegistered = new CustomerRegistration().RegisterCustomer(customer);
+            Assert.IsNotNull(customer);
+            Assert.IsTrue(IsRegistered);
+        }     
+</code></pre>
+<ol start="9">
+<li>Ahora necesitamos comprobar las pruebas contruidas para eso abrir un terminal en VS Code (CTRL + Ñ) o vuelva al terminal anteriormente abierto, y ejecutar el comando:</li>
+</ol>
+<pre><code class="lang-Bash">dotnet test --collect:&quot;XPlat Code Coverage&quot;
+</code></pre>
+<ol start="10">
+<li>Si las pruebas se ejecutaron correctamente debera aparcer un resultado similar al siguiente:</li>
+</ol>
+<pre><code class="lang-Bash">Passed!  - Failed:     0, Passed:     2, Skipped:     0, Total:     2, Duration: 11 ms 
+</code></pre>
+<ol start="11">
+<li>En el terminal, ejecutar el siguiente comando para generar el diagrama de clases respectivo, tener en consideración que ruta del DLL puede ser distinta según la versión de .NET tenga instalada en el equipo.</li>
+</ol>
+<pre><code class="lang-Bash">dotnet tool install --global dll2mmd
+dll2mmd -f CustomerApp.Domain/bin/Debug/net8.0/CustomerApp.Domain.dll -o disenio.md
+</code></pre>
+<hr>
+<h2 id="actividades-encargadas">Actividades Encargadas</h2>
+<ol>
+<li>Completar la documentación de todas las clases y generar una automatización .github/workflows/publish_docs.yml (Github Workflow) utilizando DocFx (init, metadata y build) y publicar el site de documentación generado en un Github Page.</li>
+<li>Generar una automatización de nombre .github/workflows/package_nuget.yml (Github Workflow) que ejecute:
+<ul>
+<li>Pruebas unitarias y reporte de pruebas automatizadas</li>
+<li>Realice el analisis con SonarCloud.</li>
+<li>Contruya un archivo .nuget a partir del proyecto Notifications.Domain y del proyecto CustomerApp.Domain y los publique como un Paquete de Github</li>
+</ul>
+</li>
+<li>Generar una automatización de nombre .github/workflows/release_version.yml (Github Workflow) que contruya la version (release) de cada  paquete y publique en Github Releases e incluya los nugets generados</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/UPT-FAING-EPIS/lab-2025-ii-pds-u2-02-cs-nkmelndz/blob/main/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © 2024. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
