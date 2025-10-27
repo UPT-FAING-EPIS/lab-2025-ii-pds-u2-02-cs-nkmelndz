@@ -8,9 +8,9 @@ Esta es la documentación oficial de los proyectos Notifications y CustomerApp. 
 
 ## Contenido:
 
-1. [Documentación de Notifications](api/Notifications/index.md)
-2. [Documentación de CustomerApp](api/CustomerApp/index.md)
-3. [Guía de Usuario](#guía-de-usuario)
+1. [Documentación de Notifications](documentation/api/Notifications/index.md)
+2. [Documentación de CustomerApp](documentation/api/CustomerApp/index.md)
+3. [Guía de Usuario](documentation/user-guide.md)
 
 ## Introducción
 

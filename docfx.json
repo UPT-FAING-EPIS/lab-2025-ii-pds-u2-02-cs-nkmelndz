@@ -7,25 +7,55 @@
           "src": "Notifications",
           "files": [
             "**/*.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**"
           ]
         },
         {
           "src": "CustomerApp",
           "files": [
             "**/*.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**"
           ]
         }
-      ]
+      ],
+      "dest": "api",
+      "filter": "filterConfig.yml",
+      "properties": {
+        "TargetFramework": "net8.0"
+      }
     }
   ],
   "build": {
     "content": [
       {
         "files": [
-          "**/*.{md,yml}"
+          "api/**.yml",
+          "api/index.md"
+        ],
+        "src": "api",
+        "dest": "documentation/api"
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/toc.yml"
         ],
         "exclude": [
-          "_site/**"
+          "**/obj/**",
+          "**/_site/**",
+          "README.md"
+        ]
+      },
+      {
+        "files": [
+          "toc.yml",
+          "*.md"
         ]
       }
     ],
@@ -36,16 +66,48 @@
         ]
       }
     ],
-    "output": "_site",
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadata": {
+      "_appName": "Notifications & CustomerApp Documentation",
+      "_appTitle": "Notifications & CustomerApp API Documentation",
+      "_appFooter": "Copyright © 2024. All rights reserved.",
+      "_enableSearch": true,
+      "_enableNewTab": true,
+      "_appLogoPath": "images/logo.png"
+    },
+    "fileMetadata": {
+      "priority": {
+        "**.md": {
+          "priority": 1,
+          "keywords": "content"
+        },
+        "api/**.yml": {
+          "priority": 2,
+          "keywords": "api"
+        }
+      }
+    },
     "template": [
       "default",
       "modern"
     ],
-    "globalMetadata": {
-      "_appName": "Notifications & CustomerApp Documentation",
-      "_appTitle": "Notifications & CustomerApp API",
-      "_enableSearch": true,
-      "pdf": true
-    }
+    "postProcessors": [
+      "ExtractSearchIndex"
+    ],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false
   }
 }
