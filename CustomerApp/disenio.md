@@ -1,4 +1,4 @@
-```mermaid
+```mermaid.md
 classDiagram
 
 class CustomerRegistration
