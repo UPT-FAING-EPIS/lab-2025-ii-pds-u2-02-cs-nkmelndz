@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/Notifications.Domain.csproj",
-        "projectName": "Notifications.Domain",
+        "projectName": "NotificationsDomainU202",
         "projectPath": "/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/Notifications.Domain.csproj",
         "packagesPath": "/Users/n/.nuget/packages/",
         "outputPath": "/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/obj/",

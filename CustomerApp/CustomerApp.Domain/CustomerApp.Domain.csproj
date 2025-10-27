@@ -4,6 +4,13 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageId>CustomerAppDomainU202</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>UPT-FAING-EPIS</Authors>
+    <Company>UPT</Company>
+    <Description>Domain logic for CustomerApp</Description>
+    <PackageTags>CustomerApp;Domain</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
