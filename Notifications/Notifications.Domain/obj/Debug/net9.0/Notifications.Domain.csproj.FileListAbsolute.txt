@@ -1,0 +1,12 @@
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/bin/Debug/net9.0/Notifications.Domain.deps.json
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/bin/Debug/net9.0/Notifications.Domain.dll
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/bin/Debug/net9.0/Notifications.Domain.pdb
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/obj/Debug/net9.0/Notifications.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/obj/Debug/net9.0/Notifications.Domain.AssemblyInfoInputs.cache
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/obj/Debug/net9.0/Notifications.Domain.AssemblyInfo.cs
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/obj/Debug/net9.0/Notifications.Domain.csproj.CoreCompileInputs.cache
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/obj/Debug/net9.0/Notifications.Domain.sourcelink.json
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/obj/Debug/net9.0/Notifications.Domain.dll
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/obj/Debug/net9.0/refint/Notifications.Domain.dll
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/obj/Debug/net9.0/Notifications.Domain.pdb
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/Notifications/Notifications.Domain/obj/Debug/net9.0/ref/Notifications.Domain.dll
