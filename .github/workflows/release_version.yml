@@ -13,6 +13,14 @@ on:
 jobs:
   build-release:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project: [
+          ./CustomerApp/CustomerApp.Domain/CustomerApp.Domain.csproj,
+          ./Notifications/Notifications.Domain/Notifications.Domain.csproj
+        ]
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,14 +44,14 @@ jobs:
         run: |
           ver=${{ steps.v.outputs.ver }}
           echo "Setting version to $ver"
-          sed -i "s#<Version>.*</Version>#<Version>$ver</Version>#" Bank/Bank.Domain/Bank.Domain.csproj
-          grep -n "<Version>" Bank/Bank.Domain/Bank.Domain.csproj
+          sed -i "s#<Version>.*</Version>#<Version>$ver</Version>#" ${{ matrix.project }}
+          grep -n "<Version>" ${{ matrix.project }}
 
       - name: Build Release
-        run: dotnet build Bank/Bank.Domain/Bank.Domain.csproj -c Release
+        run: dotnet build ${{ matrix.project }} -c Release
 
       - name: Pack
-        run: dotnet pack Bank/Bank.Domain/Bank.Domain.csproj -c Release -o out /p:PackageVersion=${{ steps.v.outputs.ver }} /p:Version=${{ steps.v.outputs.ver }}
+        run: dotnet pack ${{ matrix.project }} -c Release -o out /p:PackageVersion=${{ steps.v.outputs.ver }} /p:Version=${{ steps.v.outputs.ver }}
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
