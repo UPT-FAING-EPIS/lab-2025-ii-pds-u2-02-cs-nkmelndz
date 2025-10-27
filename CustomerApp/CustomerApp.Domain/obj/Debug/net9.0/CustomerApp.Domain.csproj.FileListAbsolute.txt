@@ -1,0 +1,12 @@
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/CustomerApp/CustomerApp.Domain/bin/Debug/net9.0/CustomerApp.Domain.deps.json
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/CustomerApp/CustomerApp.Domain/bin/Debug/net9.0/CustomerApp.Domain.dll
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/CustomerApp/CustomerApp.Domain/bin/Debug/net9.0/CustomerApp.Domain.pdb
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/CustomerApp/CustomerApp.Domain/obj/Debug/net9.0/CustomerApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/CustomerApp/CustomerApp.Domain/obj/Debug/net9.0/CustomerApp.Domain.AssemblyInfoInputs.cache
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/CustomerApp/CustomerApp.Domain/obj/Debug/net9.0/CustomerApp.Domain.AssemblyInfo.cs
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/CustomerApp/CustomerApp.Domain/obj/Debug/net9.0/CustomerApp.Domain.csproj.CoreCompileInputs.cache
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/CustomerApp/CustomerApp.Domain/obj/Debug/net9.0/CustomerApp.Domain.sourcelink.json
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/CustomerApp/CustomerApp.Domain/obj/Debug/net9.0/CustomerApp.Domain.dll
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/CustomerApp/CustomerApp.Domain/obj/Debug/net9.0/refint/CustomerApp.Domain.dll
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/CustomerApp/CustomerApp.Domain/obj/Debug/net9.0/CustomerApp.Domain.pdb
+/Users/n/Desktop/lab-2025-ii-pds-u2-02-cs-nkmelndz/CustomerApp/CustomerApp.Domain/obj/Debug/net9.0/ref/CustomerApp.Domain.dll
