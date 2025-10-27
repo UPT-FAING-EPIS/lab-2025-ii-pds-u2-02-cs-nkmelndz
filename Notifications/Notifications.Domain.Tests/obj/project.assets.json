@@ -347,14 +347,14 @@
           }
         }
       },
-      "Notifications.Domain/1.0.0": {
+      "NotificationsDomainU202/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
-          "bin/placeholder/Notifications.Domain.dll": {}
+          "bin/placeholder/NotificationsDomainU202.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Notifications.Domain.dll": {}
+          "bin/placeholder/NotificationsDomainU202.dll": {}
         }
       }
     }
@@ -804,7 +804,7 @@
         "version.txt"
       ]
     },
-    "Notifications.Domain/1.0.0": {
+    "NotificationsDomainU202/1.0.0": {
       "type": "project",
       "path": "../Notifications.Domain/Notifications.Domain.csproj",
       "msbuildProject": "../Notifications.Domain/Notifications.Domain.csproj"
@@ -816,7 +816,7 @@
       "NUnit >= 4.2.2",
       "NUnit.Analyzers >= 4.4.0",
       "NUnit3TestAdapter >= 4.6.0",
-      "Notifications.Domain >= 1.0.0",
+      "NotificationsDomainU202 >= 1.0.0",
       "coverlet.collector >= 6.0.2"
     ]
   },

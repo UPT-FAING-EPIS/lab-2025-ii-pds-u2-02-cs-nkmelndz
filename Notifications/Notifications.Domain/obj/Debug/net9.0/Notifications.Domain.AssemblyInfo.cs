@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Domain logic for Notifications")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71d64814ea67cce2b168558c34705537d454de61")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97d3546d30b1c383dbec56884c48acedb7604d4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Notifications.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Notifications.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
