@@ -77,6 +77,9 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore ${{ matrix.project }}
 
+      - name: Build project
+        run: dotnet build ${{ matrix.project }} --configuration Release
+
       - name: Pack NuGet package
         run: dotnet pack ${{ matrix.project }} --configuration Release --output ./packages/${{ matrix.project }}
 
