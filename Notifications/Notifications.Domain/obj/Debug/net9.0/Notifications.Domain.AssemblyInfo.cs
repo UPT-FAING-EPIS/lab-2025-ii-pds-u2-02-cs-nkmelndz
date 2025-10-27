@@ -13,10 +13,12 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Notifications.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6ee8883ccddae8bc2cb8321689f4615aa135987")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3e576a5a5e06986c9f6bd4a02944527a81f7d64")]
 [assembly: System.Reflection.AssemblyProductAttribute("Notifications.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Notifications.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+
+// Este archivo contiene información de ensamblado para Notifications.Domain.
 
 // Generado por la clase WriteCodeFragment de MSBuild.
 

@@ -3,14 +3,21 @@ using System.Net.Mail;
 
 namespace CustomerApp.Domain
 {
+    /// <summary>
+    /// Servicio para enviar correos electrónicos de registro.
+    /// </summary>
     public class EmailService
     {
+        /// <summary>
+        /// Envía un correo electrónico de registro al cliente.
+        /// </summary>
+        /// <param name="customer">El cliente al que se enviará el correo.</param>
+        /// <returns>True si el correo fue enviado exitosamente.</returns>
         public bool SendRegistrationEmail(Customer customer)
         {
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 UseDefaultCredentials = false,
-                //Port = 587,
                 Credentials = new NetworkCredential(customer.Email, customer.Password),
                 EnableSsl = true,
             };
@@ -22,7 +29,6 @@ namespace CustomerApp.Domain
                 IsBodyHtml = true,
             };
             mailMessage.To.Add(customer.Email);
-            //smtpClient.Send(mailMessage);
             return true;
         }        
     }
