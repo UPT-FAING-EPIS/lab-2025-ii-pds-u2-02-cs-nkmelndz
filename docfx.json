@@ -1,33 +1,51 @@
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
   "metadata": [
     {
       "src": [
         {
+          "src": "Notifications",
           "files": [
-            "Notifications/Notifications.Domain/**/*.cs",
-            "CustomerApp/CustomerApp.Domain/**/*.cs",
             "**/*.csproj"
-          ],
-          "exclude": [
-            "**/bin/**",
-            "**/obj/**"]
+          ]
+        },
+        {
+          "src": "CustomerApp",
+          "files": [
+            "**/*.csproj"
+          ]
         }
-      ],
-      "dest": "api"
+      ]
     }
   ],
   "build": {
     "content": [
       {
-        "files": ["api/**.yml", "api/index.md"]
-      },
-      {
-        "files": ["docs/**"]
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
       }
     ],
-    "dest": "_site",
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
     "globalMetadata": {
-      "_appTitle": "Documentación del Proyecto"
+      "_appName": "Notifications & CustomerApp Documentation",
+      "_appTitle": "Notifications & CustomerApp API",
+      "_enableSearch": true,
+      "pdf": true
     }
   }
 }
